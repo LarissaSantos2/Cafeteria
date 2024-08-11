@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    </head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* GERAL */
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    height: 3000px;
+    font-size: 16px;
+    background-color: #eceae2;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    z-index: 2;
+    background: #2a201c;
+}
+
+.header .logo img {
+    height: 6rem;
+}
+
+.logo {
+    color: #d3ad7f;
+    font-size: 3rem;
+}
+
+.header .navbar #close {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.header .navbar a {
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: #d3ad7f;
+}
+
+.header #menu {
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.carrinho {
+    color: white;
+    font-size: 3rem;
+}
+
+
+/* CARRINHO */
+.carrinho1 {
+    position: fixed;
+    top: 0; 
+    margin: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: -2px 0 4px hsl(0 2% 15% / 10%);
+}
+
+#fechar-carrinho {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: #2a201c;
+    cursor: pointer;
+}
+
+#icone-carrinho {
+    position: relative;
+    font-size: 2.6rem;
+    color:#d3ad7f;
+    cursor: pointer;
+}
+
+
+
+#quantidade-carrinho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 0.3em;
+    border-radius: 50%;
+    padding: 3px 6px;
+  }
+
+
+/* DIVS */
+
+button{
+    position: relative;
+    top: 20px;
+    height: 30px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.pedido{
+    position: relative;
+    left: 10px;
+    font-size: 30px;
+}
+
+.btRemove{
+    background-color: rgb(177, 32, 7);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+}
+
+.btAtende{
+    background-color: rgb(52, 97, 56);
+    border: 0;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 20px;
+    width: 170px;
+}
+
+.registros{
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px #c5c5c5;
+    width: 300px;
+    height: 223px;
+    margin: 20px;
+    left: 50px;
+    white-space: nowrap; /* Evita que o texto quebre em várias linhas */
+    overflow: hidden; /* Esconde o texto que não cabe na largura */
+}
+
+.pnome{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.pvalores{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    font-size: 17px;
+    color: #000000;
+}
+
+hr{
+    border: 01px solid #2a201c;
+}
+
+
+
+
+</style>
+
+<body>
+   <header class="header">
+    <a href="#" class="logo">
+        <i class='bx bxs-coffee-bean'></i>
+    </a>
+    <nav class="navbar">
+        <div id="close" class="fas fa-times"></div>
+        <a href="Cafeteria - Larissa&Julia.html" class="nav_item">Cafés</a>
+        <a href="Cafeteria - Larissa&Julia.html" class="nav_item">Frappes</a>
+        <a href="Cafeteria - Larissa&Julia.html" class="nav_item">Chás</a>
+        <a href="Cafeteria - Larissa&Julia.html" class="nav_item">Salgados</a>
+        <a href="Forms - cafeteria.html" class="nav_item">Doces</a>
+    </nav>
+    <i class="fa-solid fa-bag-shopping carrinho" id="icone-carrinho">
+    </i>
+        <i class='bx bx-x' id="fechar-carrinho"></i>
+    </div>
+    <div id="menu" class="fas fa-bars"></div>
+</header>
+
+<br><br><br><br><br>
+
+<p class="pedido">Pedido Pronto para Retirada: <span id="nomeAtendido"></span></p>
+        <div id="display"></div>
+    
+        <script>
+
+            // Função para exibir os registros na página
+            function exibirRegistros() {
+                const registros = JSON.parse(localStorage.getItem('registros')) || [];
+                const display = document.getElementById('display');
+                
+                display.innerHTML = '';
+    
+
+                registros.forEach((registro, index) => {
+        
+                    // Criar uma nova div para cada registro
+                    const div = document.createElement('div');
+                    div.className = 'registros';
+                    div.innerHTML = `
+                        <br><p class="pnome">${registro.nome}</p><br>
+                        <hr>
+                        <p class="pvalores">Telefone: ${registro.tel}<br>
+                        Unidade: ${registro.unid}<br>
+                        OBS: ${registro.obs}<br>
+                        Valor Total: ${registro.total}</p>
+                        <button class="btRemove" onclick="apagarRegistro(${index})">Cancelar</button>
+                        <button class="btAtende" onclick="Atender(${index})">Retirar Pedido</button><br><br>
+                    `;
+                    display.appendChild(div);
+                });
+            }
+    
+            // Função para apagar um registro específico
+            function apagarRegistro(index) {
+                var registros = JSON.parse(localStorage.getItem('registros')) || [];
+
+                registros.splice(index, 1);
+                // Atualizar o localStorage com o array modificado
+                localStorage.setItem('registros', JSON.stringify(registros));
+
+                // Atualizar a exibição dos registros
+                exibirRegistros();
+            }
+
+
+        function Atender(index) {
+            var registros = JSON.parse(localStorage.getItem('registros')) || [];
+
+            const atender = registros.splice(index, 1)[0];
+            
+            // Atualiza o localStorage com o array modificado
+            localStorage.setItem('registros', JSON.stringify(registros));
+            
+
+            document.getElementById('nomeAtendido').innerHTML = `${atender.nome}`;
+            exibirRegistros();
+        }
+
+        window.onload = exibirRegistros;
+        </script>
+</body>
+</html>
